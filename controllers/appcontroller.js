@@ -26,13 +26,12 @@ module.exports= (app) => {
           catch (err) {
               console.log(err);
           }
-      
           res.send("insert");
       });
       
       app.get("/update", async(req, res) => {
           try{
-          await course.update({ CourseName: "python" },{where: {id :1}});
+          await course.update({ CourseName: "Nodejs" , Fees:120000 },{where: {id :1}});
           }
           catch (err){
               console.log(err);
